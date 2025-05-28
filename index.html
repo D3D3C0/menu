@@ -2,9 +2,109 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Menu da Pâtisserie</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #fffaf5;
+      color: #333;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #c94f4f;
+    }
+
+    header p {
+      font-style: italic;
+      color: #666;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .item {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .item h2 {
+      font-size: 1.3em;
+      margin-bottom: 10px;
+      color: #aa3c3c;
+    }
+
+    .item p {
+      font-size: 0.95em;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #aaa;
+    }
+
+    .tab {
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    .tab-button {
+      background-color: #f8f1ed;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9em;
+      margin-top: 10px;
+      color: #aa3c3c;
+      transition: background 0.2s;
+    }
+
+    .tab-button:hover {
+      background-color: #e8d9d2;
+    }
+
+    .tab-content {
+      display: none;
+      margin-top: 8px;
+      font-size: 0.9em;
+      color: #444;
+      background: #fff5ee;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #f0e0d6;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -13,15 +113,14 @@
   </header>
 
   <main class="menu">
-
     <section class="item">
       <img src="images/croissant.jpg" alt="Croissant" />
       <h2>🥐 Croissant</h2>
-      <p>Nosso croissant é aquele folhado leve e quentinho que combina com tudo!</p>
+      <p>Nosso croissant é aquele folhado leve e quentinho que combina com tudo! Café, suco, doce, salgado… é versátil, delicioso e sempre fresquinho. Quer um agora? Ele acabou de sair do forno!</p>
       <div class="tab">
-        <button class="tab-button">Ver ingredientes</button>
+        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
         <div class="tab-content">
-          <strong>Ingredientes:</strong> farinha de trigo enriquecida com ferro e ácido fólico, manteiga, leite, açúcar, sal, fermento seco doce.
+          <strong>Ingredientes:</strong> farinha de trigo enriquecida com ferro e ácido fólico, manteiga, leite, açúcar, sal, fermento seco doce (fermento biológico, emulsificante INS 491, melhorador de farinha INS 300).
         </div>
       </div>
     </section>
@@ -30,77 +129,55 @@
       <img src="pain-chocolat.jpg" alt="Pain au Chocolat" />
       <h2>🍫 Pain au Chocolat</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <div class="tab">
-        <button class="tab-button">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </div>
-      </div>
     </section>
 
     <section class="item">
       <img src="pain-noisette.jpg" alt="Pain au Chocolat Noisette" />
       <h2>🌰 Pain au Chocolat Noisette</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <div class="tab">
-        <button class="tab-button">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </div>
-      </div>
     </section>
 
     <section class="item">
       <img src="bolo-chiffon.jpg" alt="Bolo Chiffon" />
       <h2>🍰 Bolo Chiffon</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <div class="tab">
-        <button class="tab-button">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </div>
-      </div>
     </section>
 
     <section class="item">
       <img src="bolo-cremeux.jpg" alt="Bolo Cremeux de Chocolate" />
       <h2>🍫 Bolo Cremeux de Chocolate</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <div class="tab">
-        <button class="tab-button">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </div>
-      </div>
     </section>
 
     <section class="item">
       <img src="chausson.jpg" alt="Chausson aux Pommes" />
       <h2>🍎 Chausson aux Pommes</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <div class="tab">
-        <button class="tab-button">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </div>
-      </div>
     </section>
 
     <section class="item">
       <img src="canele.jpg" alt="Canelé" />
       <h2>🍮 Canelé</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <div class="tab">
-        <button class="tab-button">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </div>
-      </div>
     </section>
 
     <section class="item">
       <img src="cinnamon-roll.jpg" alt="Cinnamon Roll" />
       <h2>🍥 Cinnamon Roll</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <div class="tab">
-        <button class="tab-button">V…
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Pâtisserie dos Sonhos</p>
+  </footer>
+
+  <script>
+    function toggleTab(button) {
+      const content = button.nextElementSibling;
+      content.style.display = content.style.display === "block" ? "none" : "block";
+      button.textContent = content.style.display === "block" ? "Ocultar ingredientes" : "Ver ingredientes";
+    }
+  </script>
+</body>
+</html>
