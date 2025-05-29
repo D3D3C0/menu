@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Menu da Pâtisserie - Viennoiseries</title>
+  <title>Menu da Pâtisserie</title>
   <style>
     * {
       margin: 0;
@@ -65,7 +65,7 @@
     .item p {
       font-size: 0.95em;
       color: #555;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     footer {
@@ -105,19 +105,34 @@
       border-radius: 6px;
       border: 1px solid #f0e0d6;
     }
+
+    /* Seção para os títulos das categorias */
+    .section-title {
+      grid-column: 1 / -1;
+      font-size: 1.8em;
+      margin: 30px 0 15px 0;
+      color: #c94f4f;
+      border-bottom: 2px solid #c94f4f;
+      padding-bottom: 5px;
+      text-align: center;
+      font-weight: 700;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Menu da Pâtisserie - Viennoiseries</h1>
-    <p>Delícias francesas para o seu paladar!</p>
+    <h1>Menu da Pâtisserie</h1>
+    <p>Doces franceses feitos com amor!</p>
   </header>
 
   <main class="menu">
+    <!-- Viennoiseries -->
+    <div class="section-title">Viennoiseries</div>
+
     <section class="item">
       <img src="images/croissant-amandes.jpg" alt="Croissant aux Amandes" />
       <h2>🥐 Croissant aux Amandes</h2>
-      <p>Delicado, amanteigado e envolvente. Um croissant artesanal recheado com frangipane (creme de amêndoas), levemente tostado, coberto com lâminas de amêndoas crocantes e polvilhado com açúcar de confeiteiro.</p>
+      <p>Delicado, amanteigado e envolvente. Croissant artesanal recheado com frangipane (creme de amêndoas), coberto com lâminas de amêndoas crocantes e polvilhado com açúcar de confeiteiro.</p>
       <div class="tab">
         <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
         <div class="tab-content">
@@ -129,7 +144,7 @@
     <section class="item">
       <img src="images/bostock.jpg" alt="Bostock" />
       <h2>🍞 Bostock</h2>
-      <p>Uma fatia de brioche transformada em poesia. Embebido em calda de laranja, coberto com creme de amêndoas e gratinado no forno. Uma explosão de aroma e sabor.</p>
+      <p>Uma fatia de brioche transformada em poesia. Embebido em calda de laranja, coberto com creme de amêndoas e gratinado no forno.</p>
       <div class="tab">
         <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
         <div class="tab-content">
@@ -175,7 +190,7 @@
     </section>
 
     <section class="item">
-      <img src="images/tarte-fine-pommes.jpg" alt="Tarte Fine aux Pommes" />
+      <img src="images/tarte-fine-aux-pommes.jpg" alt="Tarte Fine aux Pommes" />
       <h2>🍏 Tarte Fine aux Pommes</h2>
       <p>Elegância em forma de sobremesa. Finas fatias de maçã caramelizadas sobre massa folhada leve e crocante.</p>
       <div class="tab">
@@ -197,10 +212,124 @@
         </div>
       </div>
     </section>
+
+    <!-- Pães & Sanduíches -->
+    <div class="section-title">Pães & Sanduíches</div>
+
+    <section class="item">
+      <img src="images/cesta-paes.jpg" alt="Cesta de Pães" />
+      <h2>🥖 Cesta de Pães</h2>
+      <p>Um início perfeito para o seu dia. Seleção de pães artesanais acompanhada de manteiga e geleia artesanal.</p>
+      <div class="tab">
+        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
+        <div class="tab-content">
+          <strong>Ingredientes:</strong> Pães variados, manteiga, geleia artesanal.
+        </div>
+      </div>
+    </section>
+
+    <section class="item">
+      <img src="images/pao-campagne.jpg" alt="Pão Campagne na Chapa" />
+      <h2>🍞 Pão Campagne na Chapa com Manteiga ou Requeijão</h2>
+      <p>Rusticidade com sabor e textura. Fatia generosa de pão de fermentação natural tostada na manteiga.</p>
+      <div class="tab">
+        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
+        <div class="tab-content">
+          <strong>Ingredientes:</strong> Farinha de trigo, fermento natural, manteiga ou requeijão.
+        </div>
+      </div>
+    </section>
+
+    <section class="item">
+      <img src="images/misto-quente.jpg" alt="Queijo Quente / Misto Quente / Croissant Misto Quente" />
+      <h2>🧀 Queijo Quente / Misto Quente / Croissant Misto Quente</h2>
+      <p>O clássico, do nosso jeito. Queijos na chapa em pão forma rústico ou brioche. Com ou sem presunto Royale.</p>
+      <div class="tab">
+        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
+        <div class="tab-content">
+          <strong>Ingredientes:</strong> Pão artesanal, queijo meia cura, queijo prato, presunto Royale (opcional).
+        </div>
+      </div>
+    </section>
+
+    <section class="item">
+      <img src="images/sanduiche-ovos-mexidos.jpg" alt="Sanduíche de Ovos Mexidos no Croissant" />
+      <h2>🍳 Sanduíche de Ovos Mexidos no Croissant</h2>
+      <p>Conforto e sabor em cada camada. Croissant amanteigado com ovos mexidos e flor de sal.</p>
+      <div class="tab">
+        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
+        <div class="tab-content">
+          <strong>Ingredientes:</strong> Croissant, ovos, flor de sal.
+        </div>
+      </div>
+    </section>
+
+    <section class="item">
+      <img src="images/breakfast-sandwich.jpg" alt="Breakfast Sandwich" />
+      <h2>🥪 Breakfast Sandwich</h2>
+      <p>Completo e reconfortante. Ovo frito com presunto Royale, queijo e bacon no English muffin artesanal.</p>
+      <div class="tab">
+        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
+        <div class="tab-content">
+          <strong>Ingredientes:</strong> Ovo, presunto Royale, queijo meia cura, bacon, English muffin.
+        </div>
+      </div>
+    </section>
+
+    <section class="item">
+      <img src="images/croque-monsieur.jpg" alt="Croque Monsieur / Croque Madame" />
+      <h2>🍽️ Croque Monsieur / Croque Madame</h2>
+      <p>Um brinde à tradição francesa. Sanduíche quente com presunto Royale, queijo e molho béchamel gratinado. Versão "Madame" com ovo frito.</p>
+      <div class="tab">
+        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
+        <div class="tab-content">
+          <strong>Ingredientes:</strong> Brioche, presunto Royale, queijo meia cura, molho béchamel, ovo (opcional).
+        </div>
+      </div>
+    </section>
+
+    <section class="item">
+      <img src="images/bauru.jpg" alt="Bauru Tradição" />
+      <h2>🥪 Bauru Tradição</h2>
+      <p>O clássico paulista com toque Le Jazz. Presunto Royale, rosbife, bacon, queijo, tomate, no forma rústico.</p>
+      <div class="tab">
+        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
+        <div class="tab-content">
+          <strong>Ingredientes:</strong> Presunto Royale, rosbife, bacon, queijo meia cura, tomate, pão forma.
+        </div>
+      </div>
+    </section>
+
+    <!-- Ovos & Outros -->
+    <div class="section-title">Ovos & Outros</div>
+
+    <section class="item">
+      <img src="images/ovos-fritos.jpg" alt="Ovos Fritos, Mexidos ou Poché" />
+      <h2>🍳 Ovos Fritos, Mexidos ou Poché</h2>
+      <p>Simples e versáteis. Ovos frescos preparados no seu estilo favorito.</p>
+      <div class="tab">
+        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
+        <div class="tab-content">
+          <strong>Ingredientes:</strong> Ovos, manteiga, sal, pimenta do reino.
+        </div>
+      </div>
+    </section>
+
+    <section class="item">
+      <img src="images/omelete.jpg" alt="Omelete Especial Le Jazz" />
+      <h2>🍽️ Omelete Especial Le Jazz</h2>
+      <p>Ovos batidos com ervas finas, queijo meia cura, tomate e cebola, servido com salada fresca.</p>
+      <div class="tab">
+        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
+        <div class="tab-content">
+          <strong>Ingredientes:</strong> Ovos, queijo meia cura, tomate, cebola, ervas finas.
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Pâtisserie dos Sonhos</p>
+    <p>Le Jazz Pâtisserie & Boulangerie - Paris no coração da sua cidade</p>
   </footer>
 
   <script>
@@ -211,7 +340,7 @@
         button.textContent = "Ver ingredientes";
       } else {
         content.style.display = "block";
-        button.textContent = "Ocultar ingredientes";
+        button.textContent = "Esconder ingredientes";
       }
     }
   </script>
