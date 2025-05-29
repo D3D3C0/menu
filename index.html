@@ -1,250 +1,157 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Menu da Pâtisserie</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    body {
-      background: #fffaf5;
-      color: #333;
-      padding: 20px;
-    }
-
-    header {
-      text-align: center;
-      padding-bottom: 20px;
-    }
-
-    header h1 {
-      font-size: 2.5em;
-      color: #c94f4f;
-    }
-
-    header p {
-      font-style: italic;
-      color: #666;
-    }
-
-    .menu {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    .item {
-      background: #fff;
-      border: 1px solid #eee;
-      border-radius: 12px;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-
-    .item img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 10px;
-    }
-
-    .item h2 {
-      font-size: 1.3em;
-      margin-bottom: 10px;
-      color: #aa3c3c;
-    }
-
-    .item p {
-      font-size: 0.95em;
-      color: #555;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      color: #aaa;
-    }
-
-    .tab {
-      margin-top: 10px;
-      text-align: center;
-    }
-
-    .tab-button {
-      background-color: #f8f1ed;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 0.9em;
-      margin-top: 10px;
-      color: #aa3c3c;
-      transition: background 0.2s;
-    }
-
-    .tab-button:hover {
-      background-color: #e8d9d2;
-    }
-
-    .tab-content {
-      display: none;
-      margin-top: 8px;
-      font-size: 0.9em;
-      color: #444;
-      background: #fff5ee;
-      padding: 10px;
-      border-radius: 6px;
-      border: 1px solid #f0e0d6;
-      text-align: center;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Menu Le Jazz</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f8f6f0;
+    color: #333;
+    margin: 20px;
+    max-width: 800px;
+  }
+  h2 {
+    color: #d3d3c0;
+    border-bottom: 2px solid #d3d3c0;
+    padding-bottom: 5px;
+  }
+  .item {
+    margin-bottom: 20px;
+  }
+  .item-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 4px;
+  }
+  .description {
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+  .ingredients {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #555;
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1>Menu da Pâtisserie</h1>
-    <p>Doces franceses feitos com amor!</p>
-  </header>
 
-  <main class="menu">
-    <section class="item">
-      <img src="images/croissant.jpg" alt="Croissant" />
-      <h2>🥐 Croissant</h2>
-      <p>Nosso croissant é aquele folhado leve e quentinho que combina com tudo!</p>
-      <div class="tab">
-        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> farinha de trigo, manteiga, leite, açúcar, sal, fermento biológico.
-        </div>
-      </div>
-    </section>
+<h2>Viennoiseries</h2>
 
-    <section class="item">
-      <img src="pain-chocolat.jpg" alt="Pain au Chocolat" />
-      <h2>🍫 Pain au Chocolat</h2>
-      <p>Delicioso pão folhado com recheio de chocolate 44%.</p>
-      <div class="tab">
-        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> farinha de trigo, manteiga, leite, açúcar, fermento biológico, chocolate 44%.
-        </div>
-      </div>
-    </section>
+<div class="item">
+  <div class="item-title">Croissant aux Amandes</div>
+  <div class="description">Delicado, amanteigado e envolvente. Um croissant artesanal recheado com frangipane (creme de amêndoas), levemente tostado, coberto com lâminas de amêndoas crocantes e polvilhado com açúcar de confeiteiro.</div>
+  <div class="ingredients">Ingredientes: Massa folhada, manteiga, ovos, açúcar, amêndoas, farinha de trigo.</div>
+</div>
 
-    <section class="item">
-      <img src="pain-noisette.jpg" alt="Pain au Chocolat Noisette" />
-      <h2>🌰 Pain au Chocolat Noisette</h2>
-      <p>Uma variação do Pain au Chocolat com avelãs e creme frangipane.</p>
-      <div class="tab">
-        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> massa folhada, chocolate 70%, creme frangipane de avelã, farinha de avelã, ovo, baunilha.
-        </div>
-      </div>
-    </section>
+<div class="item">
+  <div class="item-title">Bostock</div>
+  <div class="description">Uma fatia de brioche transformada em poesia. Embebido em calda de laranja, coberto com creme de amêndoas e gratinado no forno. Uma explosão de aroma e sabor.</div>
+  <div class="ingredients">Ingredientes: Brioche, calda de laranja, creme de amêndoas, açúcar, ovos.</div>
+</div>
 
-    <section class="item">
-      <img src="bolo-chiffon.jpg" alt="Bolo Chiffon" />
-      <h2>🍰 Bolo Chiffon</h2>
-      <p>Um bolo super leve e aerado com toque cítrico.</p>
-      <div class="tab">
-        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> ovos, açúcar, suco de laranja, farinha de trigo, óleo de canola, fermento.
-        </div>
-      </div>
-    </section>
+<div class="item">
+  <div class="item-title">Pain au Chocolat</div>
+  <div class="description">Clássico da confeitaria francesa. Folhado recheado com chocolate meio amargo. Camadas crocantes com recheio que derrete na boca.</div>
+  <div class="ingredients">Ingredientes: Massa folhada, chocolate, manteiga, farinha de trigo.</div>
+</div>
 
-    <section class="item">
-      <img src="bolo-cremeux.jpg" alt="Bolo Cremeux de Chocolate" />
-      <h2>🍫 Bolo Cremeux de Chocolate</h2>
-      <p>Bolo rico em chocolate com cremeux de chocolate ao leite.</p>
-      <div class="tab">
-        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> farinha de trigo, açúcar, chocolate 70%, iogurte, ovos, creme de leite, baunilha.
-        </div>
-      </div>
-    </section>
+<div class="item">
+  <div class="item-title">Pain aux Raisins</div>
+  <div class="description">Tradicional, leve e perfumado. Folhado em espiral recheado com uvas-passas e creme patissier.</div>
+  <div class="ingredients">Ingredientes: Massa folhada, uvas-passas, creme de confeiteiro, ovos.</div>
+</div>
 
-    <section class="item">
-      <img src="chausson.jpg" alt="Chausson aux Pommes" />
-      <h2>🍎 Chausson aux Pommes</h2>
-      <p>Folhado francês recheado com maçã caramelizada.</p>
-      <div class="tab">
-        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> massa folhada, maçã, açúcar, canela, manteiga.
-        </div>
-      </div>
-    </section>
+<div class="item">
+  <div class="item-title">Pain au Chocolat et aux Noisettes</div>
+  <div class="description">Para os amantes de chocolate com um toque de avelã. Folhado artesanal recheado com chocolate e creme de avelã.</div>
+  <div class="ingredients">Ingredientes: Massa folhada, chocolate, creme de avelã, manteiga.</div>
+</div>
 
-    <section class="item">
-      <img src="canele.jpg" alt="Canelé" />
-      <h2>🍮 Canelé</h2>
-      <p>Delícia bordalesa com casquinha crocante e interior macio.</p>
-      <div class="tab">
-        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> leite, baunilha, ovos, açúcar, farinha de trigo, rum.
-        </div>
-      </div>
-    </section>
+<div class="item">
+  <div class="item-title">Tarte Fine aux Pommes</div>
+  <div class="description">Elegância em forma de sobremesa. Finas fatias de maçã caramelizadas sobre massa folhada leve e crocante.</div>
+  <div class="ingredients">Ingredientes: Maçã, massa folhada, manteiga, açúcar.</div>
+</div>
 
-    <section class="item">
-      <img src="cinnamon-roll.jpg" alt="Cinnamon Roll" />
-      <h2>🍥 Cinnamon Roll</h2>
-      <p>Clássico pão doce com canela e cobertura de açúcar.</p>
-      <div class="tab">
-        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> farinha de trigo, canela, açúcar mascavo, ovos, manteiga, leite.
-        </div>
-      </div>
-    </section>
-    <section class="item">
-  <img src="images/baba-au-rhum.jpg" alt="Baba au Rhum" />
-  <h2>🥃 Baba au Rhum</h2>
-  <p>Um clássico francês irresistível! Nosso Baba au Rhum é um bolinho leve e macio, embebido em uma calda generosa de rum aromático com toque cítrico. Finalizado com chantilly fresco, ele derrete na boca e surpreende no sabor. Perfeito para quem busca uma sobremesa elegante com um toque de ousadia.</p>
-  <div class="tab">
-    <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
-    <div class="tab-content">
-      <strong>Ingredientes:</strong> farinha de trigo, ovos, açúcar, fermento biológico, manteiga, leite, rum escuro, baunilha, raspas de laranja e chantilly.
-    </div>
-  </div>
-</section>
-<section class="item">
-  <img src="images/croissant-amendoas.jpg" alt="Croissant de Amêndoas" />
-  <h2>🥐 Croissant de Amêndoas</h2>
-  <p>Delicado por fora, surpreendente por dentro. Nosso Croissant de Amêndoas é recheado com um creme de amêndoas (frangipane), levemente tostado e coberto com lâminas crocantes de amêndoas e açúcar de confeiteiro. Uma explosão de sabor amanteigado e textura perfeita em cada mordida — ideal para acompanhar um café ou tornar qualquer momento mais especial.</p>
-  <div class="tab">
-    <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
-    <div class="tab-content">
-      <strong>Ingredientes:</strong> massa folhada artesanal (farinha de trigo, manteiga, açúcar, fermento, leite), creme de amêndoas (amêndoas, ovos, açúcar, manteiga), amêndoas laminadas e açúcar de confeiteiro.
-    </div>
-  </div>
-</section>
+<div class="item">
+  <div class="item-title">Baba au Rhum</div>
+  <div class="description">Clássico embriagante e irresistível. Bolo leve e aerado embebido em calda de rum com toques cítricos. Servido com chantilly fresco.</div>
+  <div class="ingredients">Ingredientes: Farinha de trigo, ovos, manteiga, açúcar, rum, baunilha, raspas de laranja.</div>
+</div>
 
-  </main>
+<h2>Pães &amp; Sanduíches</h2>
 
-  <footer>
-    <p>&copy; 2025 Pâtisserie dos Sonhos</p>
-  </footer>
+<div class="item">
+  <div class="item-title">Cesta de Pães</div>
+  <div class="description">Um início perfeito para o seu dia. Seleção de pães artesanais acompanhada de manteiga e geleia artesanal.</div>
+  <div class="ingredients">Ingredientes: Pães variados, manteiga, geleia artesanal.</div>
+</div>
 
-  <script>
-    function toggleTab(button) {
-      const content = button.nextElementSibling;
-      content.style.display = content.style.display === "block" ? "none" : "block";
-      button.textContent = content.style.display === "block" ? "Ocultar ingredientes" : "Ver ingredientes";
-    }
-  </script>
+<div class="item">
+  <div class="item-title">Pão Campagne na Chapa com Manteiga ou Requeijão</div>
+  <div class="description">Rusticidade com sabor e textura. Fatia generosa de pão de fermentação natural tostada na manteiga.</div>
+  <div class="ingredients">Ingredientes: Farinha de trigo, fermento natural, manteiga ou requeijão.</div>
+</div>
+
+<div class="item">
+  <div class="item-title">Queijo Quente / Misto Quente / Croissant Misto Quente</div>
+  <div class="description">O clássico, do nosso jeito. Queijos na chapa em pão forma rústico ou brioche. Com ou sem presunto Royale.</div>
+  <div class="ingredients">Ingredientes: Pão artesanal, queijo meia cura, queijo prato, presunto Royale (opcional).</div>
+</div>
+
+<div class="item">
+  <div class="item-title">Sanduíche de Ovos Mexidos no Croissant</div>
+  <div class="description">Conforto e sabor em cada camada. Croissant amanteigado com ovos mexidos e flor de sal.</div>
+  <div class="ingredients">Ingredientes: Croissant, ovos, flor de sal.</div>
+</div>
+
+<div class="item">
+  <div class="item-title">Breakfast Sandwich</div>
+  <div class="description">Completo e reconfortante. Ovo frito com presunto Royale, queijo e bacon no English muffin artesanal.</div>
+  <div class="ingredients">Ingredientes: Ovo, presunto Royale, queijo meia cura, bacon, English muffin.</div>
+</div>
+
+<div class="item">
+  <div class="item-title">Croque Monsieur / Croque Madame</div>
+  <div class="description">Um brinde à tradição francesa. Sanduíche quente com presunto Royale, queijo e molho bechamel gratinado. Versão "Madame" com ovo frito.</div>
+  <div class="ingredients">Ingredientes: Brioche, presunto Royale, queijo meia cura, molho bechamel, ovo (opcional).</div>
+</div>
+
+<div class="item">
+  <div class="item-title">Bauru Tradição</div>
+  <div class="description">O clássico paulista com toque Le Jazz. Presunto Royale, rosbife, bacon, queijo, tomate, no forma rústico.</div>
+  <div class="ingredients">Ingredientes: Presunto Royale, rosbife, bacon, queijo meia cura, tomate, pão forma.</div>
+</div>
+
+<h2>Ovos &amp; Outros</h2>
+
+<div class="item">
+  <div class="item-title">Ovos Fritos, Mexidos ou Poché</div>
+  <div class="description">Simples, orgânicos e deliciosos. Dois ovos preparados ao seu gosto, acompanhados de uma fatia de pão campagne tostado.</div>
+  <div class="ingredients">Ingredientes: Ovos orgânicos, pão campagne, manteiga (para a chapa).</div>
+</div>
+
+<div class="item">
+  <div class="item-title">Ovos com Bacon</div>
+  <div class="description">Mais sabor no seu começo de dia. Dois ovos fritos, mexidos ou pochê, servidos com bacon crocante e pão na chapa.</div>
+  <div class="ingredients">Ingredientes: Ovos orgânicos, bacon, pão campagne, manteiga.</div>
+</div>
+
+<div class="item">
+  <div class="item-title">Ovos Árabes</div>
+  <div class="description">Inspiração do Oriente Médio no seu prato. Dois ovos fritos com zaatar, hommus, tomates confitados, pepinos e azeitonas. Acompanha pão barbari artesanal.</div>
+  <div class="ingredients">Ingredientes: Ovos, zaatar, hommus, tomate confitado, pepino, azeitonas pretas, pão barbari.</div>
+</div>
+
+<div class="item">
+  <div class="item-title">Eggs Benedict</div>
+  <div class="description">Um clássico do brunch com toque refinado. Dois ovos pochê sobre English muffin torrado, com molho hollandaise e sua escolha de acompanhamentos.</div>
+  <div class="description"><strong>Opções:</strong> Bacon e presunto defumado ou salmão defumado.</div>
+  <div class="ingredients">Ingredientes: Ovos orgânicos, molho hollandaise, English muffin, bacon, presunto defumado ou salmão defumado.</div>
+</div>
+
 </body>
 </html>
-
