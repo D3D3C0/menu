@@ -3,336 +3,188 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Menu da Pâtisserie</title>
+  <title>Cardápio - Le Jazz Boulangerie</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
     body {
-      background: #fffaf5;
+      font-family: Arial, sans-serif;
+      background-color: #fdfdf8;
       color: #333;
-      padding: 20px;
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
     }
-
-    header {
-      text-align: center;
-      padding-bottom: 20px;
+    h1, h2, h3 {
+      color: #3a3a2f;
     }
-
-    header h1 {
-      font-size: 2.5em;
-      color: #c94f4f;
+    .section {
+      margin-bottom: 2.5rem;
     }
-
-    header p {
+    .item {
+      margin-bottom: 1.5rem;
+    }
+    .item h4 {
+      margin: 0.2rem 0;
+    }
+    .price {
+      font-weight: bold;
+      color: #8b5e3c;
+    }
+    .description {
       font-style: italic;
+      margin-bottom: 0.2rem;
+    }
+    .ingredientes {
+      font-size: 0.9rem;
       color: #666;
     }
-
-    .menu {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    .item {
-      background: #fff;
-      border: 1px solid #eee;
-      border-radius: 12px;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-
-    .item img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 10px;
-    }
-
-    .item h2 {
-      font-size: 1.3em;
-      margin-bottom: 10px;
-      color: #aa3c3c;
-    }
-
-    .item p {
-      font-size: 0.95em;
-      color: #555;
-      margin-bottom: 8px;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      color: #aaa;
-    }
-
-    .tab {
-      margin-top: 10px;
-      text-align: left;
-    }
-
-    .tab-button {
-      background-color: #f8f1ed;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 0.9em;
-      margin-top: 10px;
-      color: #aa3c3c;
-      transition: background 0.2s;
-    }
-
-    .tab-button:hover {
-      background-color: #e8d9d2;
-    }
-
-    .tab-content {
-      display: none;
-      margin-top: 8px;
-      font-size: 0.9em;
-      color: #444;
-      background: #fff5ee;
-      padding: 10px;
-      border-radius: 6px;
-      border: 1px solid #f0e0d6;
-    }
-
-    /* Seção para os títulos das categorias */
-    .section-title {
-      grid-column: 1 / -1;
-      font-size: 1.8em;
-      margin: 30px 0 15px 0;
-      color: #c94f4f;
-      border-bottom: 2px solid #c94f4f;
-      padding-bottom: 5px;
-      text-align: center;
-      font-weight: 700;
+    hr {
+      margin: 3rem 0;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Menu da Pâtisserie</h1>
-    <p>Doces franceses feitos com amor!</p>
-  </header>
+  <h1>Cardápio - Le Jazz Boulangerie</h1>
 
-  <main class="menu">
-    <!-- Viennoiseries -->
-    <div class="section-title">Viennoiseries</div>
+  <div class="section">
+    <h2>Observações Gerais</h2>
+    <ul>
+      <li>Os ovos e frangos usados nas receitas são orgânicos.</li>
+      <li>Todos os produtos estão sujeitos a disponibilidade.</li>
+      <li>Para encomendas, solicitar o catálogo.</li>
+      <li>Também servimos sanduíches sem pão.</li>
+      <li>Se preferir mel para adoçar, peça aos atendentes.</li>
+    </ul>
+  </div>
 
-    <section class="item">
-      <img src="images/croissant-amandes.jpg" alt="Croissant aux Amandes" />
-      <h2>🥐 Croissant aux Amandes</h2>
-      <p>Delicado, amanteigado e envolvente. Croissant artesanal recheado com frangipane (creme de amêndoas), coberto com lâminas de amêndoas crocantes e polvilhado com açúcar de confeiteiro.</p>
-      <div class="tab">
-        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> Massa folhada, manteiga, ovos, açúcar, amêndoas, farinha de trigo.
-        </div>
-      </div>
-    </section>
+  <div class="section">
+    <h2>Buffet</h2>
+    <div class="item">
+      <h4>Buffet de Almoço</h4>
+      <p class="description">Segunda a Sexta, das 12h às 15h — <span class="price">R$ 89,50</span></p>
+      <p>Seleção de pratos típicos franceses, preparados diariamente com ingredientes frescos. Folhas variadas, legumes e grãos, proteínas assadas e/ou grelhadas.</p>
+    </div>
+    <div class="item">
+      <h4>Buffet Infantil</h4>
+      <p class="description">Até 10 anos — <span class="price">R$ 51,50</span></p>
+    </div>
+  </div>
 
-    <section class="item">
-      <img src="images/bostock.jpg" alt="Bostock" />
-      <h2>🍞 Bostock</h2>
-      <p>Uma fatia de brioche transformada em poesia. Embebido em calda de laranja, coberto com creme de amêndoas e gratinado no forno.</p>
-      <div class="tab">
-        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> Brioche, calda de laranja, creme de amêndoas, açúcar, ovos.
-        </div>
-      </div>
-    </section>
+  <div class="section">
+    <h2>Cardápio Completo</h2>
+    <div class="item">
+      <h3>Viennoiseries</h3>
+      <p><strong>Croissant aux Amandes</strong> — <span class="price">R$ 19,80</span></p>
+      <p class="description">Delicado, amanteigado e envolvente. Recheado com frangipane (creme de amêndoas), coberto com lâminas crocantes de amêndoas.</p>
+      <p class="ingredientes">Ingredientes: Massa folhada, manteiga, ovos, açúcar, amêndoas, farinha de trigo.</p>
 
-    <section class="item">
-      <img src="images/pain-chocolat.jpg" alt="Pain au Chocolat" />
-      <h2>🍫 Pain au Chocolat</h2>
-      <p>Clássico da confeitaria francesa. Folhado recheado com chocolate meio amargo. Camadas crocantes com recheio que derrete na boca.</p>
-      <div class="tab">
-        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> Massa folhada, chocolate, manteiga, farinha de trigo.
-        </div>
-      </div>
-    </section>
+      <p><strong>Bostock</strong> — <span class="price">R$ 16,80</span></p>
+      <p class="description">Brioche embebido em calda de laranja, coberto com creme de amêndoas e gratinado.</p>
+      <p class="ingredientes">Ingredientes: Brioche, calda de laranja, creme de amêndoas, açúcar, ovos.</p>
 
-    <section class="item">
-      <img src="images/pain-aux-raisins.jpg" alt="Pain aux Raisins" />
-      <h2>🍇 Pain aux Raisins</h2>
-      <p>Tradicional, leve e perfumado. Folhado em espiral recheado com uvas-passas e creme patissier.</p>
-      <div class="tab">
-        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> Massa folhada, uvas-passas, creme de confeiteiro, ovos.
-        </div>
-      </div>
-    </section>
+      <p><strong>Pain au Chocolat</strong> — <span class="price">R$ 15,80</span></p>
+      <p class="description">Folhado clássico com recheio de chocolate meio amargo.</p>
+      <p class="ingredientes">Ingredientes: Massa folhada, chocolate, manteiga, farinha de trigo.</p>
 
-    <section class="item">
-      <img src="images/pain-chocolat-noisettes.jpg" alt="Pain au Chocolat et aux Noisettes" />
-      <h2>🌰 Pain au Chocolat et aux Noisettes</h2>
-      <p>Para os amantes de chocolate com um toque de avelã. Folhado artesanal recheado com chocolate e creme de avelã.</p>
-      <div class="tab">
-        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> Massa folhada, chocolate, creme de avelã, manteiga.
-        </div>
-      </div>
-    </section>
+      <p><strong>Pain aux Raisins</strong> — <span class="price">R$ 19,80</span></p>
+      <p class="description">Folhado em espiral com uvas-passas e creme patissier.</p>
+      <p class="ingredientes">Ingredientes: Massa folhada, uvas-passas, creme de confeiteiro, ovos.</p>
 
+      <p><strong>Pain au Chocolat et aux Noisettes</strong> — <span class="price">R$ 21,80</span></p>
+      <p class="description">Folhado artesanal recheado com chocolate e creme de avelã.</p>
+      <p class="ingredientes">Ingredientes: Massa folhada, chocolate, creme de avelã, manteiga.</p>
 
+      <p><strong>Tarte Fine aux Pommes</strong> — <span class="price">R$ 21,30</span></p>
+      <p class="description">Fatias finas de maçã caramelizada sobre massa folhada crocante.</p>
+      <p class="ingredientes">Ingredientes: Maçã, massa folhada, manteiga, açúcar.</p>
 
-    <section class="item">
-      <img src="images/baba-au-rhum.jpg" alt="Baba au Rhum" />
-      <h2>🍰 Baba au Rhum</h2>
-      <p>Clássico embriagante e irresistível. Bolo leve e aerado embebido em calda de rum com toques cítricos. Servido com chantilly fresco.</p>
-      <div class="tab">
-        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> Farinha de trigo, ovos, manteiga, açúcar, rum, baunilha, raspas de laranja.
-        </div>
-      </div>
-    </section>
+      <p><strong>Baba au Rhum</strong> — <span class="price">R$ 28,80</span></p>
+      <p class="description">Bolo leve embebido em calda de rum com toques cítricos. Acompanha chantilly.</p>
+      <p class="ingredientes">Ingredientes: Farinha de trigo, ovos, manteiga, açúcar, rum, baunilha, raspas de laranja.</p>
+    </div>
 
-    <!-- Pães & Sanduíches -->
-    <div class="section-title">Pães & Sanduíches</div>
+    <div class="item">
+  <h3>Pães & Sanduíches</h3>
+  <p><strong>Cesta de Pães</strong> — <span class="price">R$ 18,80</span></p>
+  <p class="description">Seleção de pães artesanais com manteiga e geleia.</p>
+  <p class="ingredientes">Ingredientes: Pães variados, manteiga, geleia artesanal.</p>
 
-    <section class="item">
-      <img src="images/cesta-paes.jpg" alt="Cesta de Pães" />
-      <h2>🥖 Cesta de Pães</h2>
-      <p>Um início perfeito para o seu dia. Seleção de pães artesanais acompanhada de manteiga e geleia artesanal.</p>
-      <div class="tab">
-        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> Pães variados, manteiga, geleia artesanal.
-        </div>
-      </div>
-    </section>
+  <p><strong>Pão Campagne na Chapa (Manteiga)</strong> — <span class="price">R$ 14,80</span></p>
+  <p><strong>Pão Campagne na Chapa (Requeijão)</strong> — <span class="price">R$ 18,30</span></p>
 
-    <section class="item">
-      <img src="images/pao-campagne.jpg" alt="Pão Campagne na Chapa" />
-      <h2>🍞 Pão Campagne na Chapa com Manteiga ou Requeijão</h2>
-      <p>Rusticidade com sabor e textura. Fatia generosa de pão de fermentação natural tostada na manteiga.</p>
-      <div class="tab">
-        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> Farinha de trigo, fermento natural, manteiga ou requeijão.
-        </div>
-      </div>
-    </section>
+  <p><strong>Queijo Quente</strong> — <span class="price">R$ 30,80</span></p>
+  <p class="description">Queijos meia cura e prato na chapa, no forma rústico ou brioche.</p>
 
-    <section class="item">
-      <img src="images/misto-quente.jpg" alt="Queijo Quente / Misto Quente / Croissant Misto Quente" />
-      <h2>🧀 Queijo Quente / Misto Quente / Croissant Misto Quente</h2>
-      <p>O clássico, do nosso jeito. Queijos na chapa em pão forma rústico ou brioche. Com ou sem presunto Royale.</p>
-      <div class="tab">
-        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> Pão artesanal, queijo meia cura, queijo prato, presunto Royale (opcional).
-        </div>
-      </div>
-    </section>
+  <p><strong>Misto Quente</strong> — <span class="price">R$ 29,80</span></p>
+  <p class="description">Presunto Royale e queijo meia cura, no forma rústico ou brioche.</p>
 
-    <section class="item">
-      <img src="images/sanduiche-ovos-mexidos.jpg" alt="Sanduíche de Ovos Mexidos no Croissant" />
-      <h2>🍳 Sanduíche de Ovos Mexidos no Croissant</h2>
-      <p>Conforto e sabor em cada camada. Croissant amanteigado com ovos mexidos e flor de sal.</p>
-      <div class="tab">
-        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> Croissant, ovos, flor de sal.
-        </div>
-      </div>
-    </section>
+  <p><strong>Misto Quente no Croissant</strong> — <span class="price">R$ 32,80</span></p>
 
-    <section class="item">
-      <img src="images/breakfast-sandwich.jpg" alt="Breakfast Sandwich" />
-      <h2>🥪 Breakfast Sandwich</h2>
-      <p>Completo e reconfortante. Ovo frito com presunto Royale, queijo e bacon no English muffin artesanal.</p>
-      <div class="tab">
-        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> Ovo, presunto Royale, queijo meia cura, bacon, English muffin.
-        </div>
-      </div>
-    </section>
+  <p><strong>Sanduíche de Ovos Mexidos no Croissant</strong> — <span class="price">R$ 30,80</span></p>
+  <p class="description">Dois ovos mexidos com flor de sal no croissant amanteigado.</p>
 
-    <section class="item">
-      <img src="images/croque-monsieur.jpg" alt="Croque Monsieur / Croque Madame" />
-      <h2>🍽️ Croque Monsieur / Croque Madame</h2>
-      <p>Um brinde à tradição francesa. Sanduíche quente com presunto Royale, queijo e molho béchamel gratinado. Versão "Madame" com ovo frito.</p>
-      <div class="tab">
-        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> Brioche, presunto Royale, queijo meia cura, molho béchamel, ovo (opcional).
-        </div>
-      </div>
-    </section>
+  <p><strong>Breakfast Sandwich</strong> — <span class="price">R$ 40,30</span></p>
+  <p class="description">Ovo frito, presunto Royale, queijo meia cura e bacon, no English muffin artesanal.</p>
 
-    <section class="item">
-      <img src="images/bauru.jpg" alt="Bauru Tradição" />
-      <h2>🥪 Bauru Tradição</h2>
-      <p>O clássico paulista com toque Le Jazz. Presunto Royale, rosbife, bacon, queijo, tomate, no forma rústico.</p>
-      <div class="tab">
-        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> Presunto Royale, rosbife, bacon, queijo meia cura, tomate, pão forma.
-        </div>
-      </div>
-    </section>
+  <p><strong>Croque Monsieur</strong> — <span class="price">R$ 42,50</span></p>
+  <p class="description">Presunto Royale, queijo meia cura e molho bechamel gratinado no brioche.</p>
+  <p><strong>+ Ovo (Croque Madame)</strong> — <span class="price">R$ 6,50</span></p>
 
-    <!-- Ovos & Outros -->
-    <div class="section-title">Ovos & Outros</div>
+  <p><strong>Bauru Tradição</strong> — <span class="price">R$ 41,80</span></p>
+  <p class="description">Presunto Royale, rosbife, bacon, queijo meia cura e tomate no pão forma rústico.</p>
 
-    <section class="item">
-      <img src="images/ovos-fritos.jpg" alt="Ovos Fritos, Mexidos ou Poché" />
-      <h2>🍳 Ovos Fritos, Mexidos ou Poché</h2>
-      <p>Simples e versáteis. Ovos frescos preparados no seu estilo favorito.</p>
-      <div class="tab">
-        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> Ovos, manteiga, sal, pimenta do reino.
-        </div>
-      </div>
-    </section>
+  <p><strong>Sanduíche de Minas, Tomate e Zaatar</strong> — <span class="price">R$ 29,30</span></p>
+  <p class="description">Queijo minas na chapa com tomate e zaatar no pão rústico.</p>
+  <p><strong>Sem Pão, com Ovo Poché</strong> — <span class="price">R$ 36,30</span></p>
 
-    <section class="item">
-      <img src="images/omelete.jpg" alt="Omelete Especial Le Jazz" />
-      <h2>🍽️ Omelete Especial Le Jazz</h2>
-      <p>Ovos batidos com ervas finas, queijo meia cura, tomate e cebola, servido com salada fresca.</p>
-      <div class="tab">
-        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
-        <div class="tab-content">
-          <strong>Ingredientes:</strong> Ovos, queijo meia cura, tomate, cebola, ervas finas.
-        </div>
-      </div>
-    </section>
-  </main>
+  <p><strong>Sanduíche de Salada de Atum</strong> — <span class="price">R$ 35,30</span></p>
+  <p class="description">Com avocado, cebola roxa, alcaparras, anchovas e alface-americana.</p>
+
+  <p><strong>Club Sandwich de Frango</strong> — <span class="price">R$ 39,80</span></p>
+  <p class="description">Frango, avocado, bacon, maionese, picles, cebola, tomate e alface-americana no pão de forma.</p>
+
+  <p><strong>Mortadela na Focaccia</strong> — <span class="price">R$ 42,30</span></p>
+  <p class="description">Mortadela italiana, mozzarella de búfala, pesto e tomate confitado.</p>
+  <p><strong>Opção de Berinjela</strong> — <span class="price">R$ 34,30</span></p>
+
+  <p><strong>Sanduíche de Carne Assada</strong> — <span class="price">R$ 48,80</span></p>
+  <p class="description">Carne chapeada com sal grosso e queijo meia cura na ciabatta. Acompanha molho chimichurri.</p>
+
+  <p><strong>Sanduíche de Rosbife</strong> — <span class="price">R$ 47,80</span></p>
+  <p class="description">No pão rústico com queijo meia cura na chapa, picles e mostarda à l'ancienne.</p>
+
+  <p><strong>+ Salada Verde</strong> — <span class="price">R$ 17,80</span></p>
+  <p><strong>+ Pão Sem Glúten</strong> — <span class="price">R$ 6,80</span></p>
+</div>
+
+<div class="item">
+  <h3>Ovos & Outros</h3>
+
+  <p><strong>2 Ovos Fritos, Mexidos ou Pochê</strong> — <span class="price">R$ 26,80</span></p>
+  <p class="description">Acompanha uma fatia de pão campagne na chapa.</p>
+
+  <p><strong>Com Bacon</strong> — <span class="price">R$ 34,60</span></p>
+
+  <p><strong>Ovos Árabes</strong> — <span class="price">R$ 43,30</span></p>
+  <p class="description">Dois ovos fritos com zaatar, hommus, tomates confitados, pepinos e azeitonas. Acompanha pão barbari.</p>
+
+  <p><strong>Eggs Benedict (Bacon e Presunto Defumado)</strong></p>
+  <p class="description">Dois ovos poché com molho hollandaise no English muffin torrado.</p>
+  <p>1/2 porção — <span class="price">R$ 31,80</span><br />
+     Inteira — <span class="price">R$ 49,00</span></p>
+
+  <p><strong>Eggs Benedict (Salmão Defumado)</strong></p>
+  <p>1/2 porção — <span class="price">R$ 38,50</span><br />
+     Inteira — <span class="price">R$ 59,50</span></p>
+</div>
+
+<!-- Outras seções como Tartines, Bolos, Bebidas, Galettes, Pratos, etc. seriam adicionadas aqui seguindo o mesmo padrão. -->
+
+  </div>
+
+  <hr />
 
   <footer>
-    <p>Le Jazz Pâtisserie & Boulangerie - Paris no coração da sua cidade</p>
+    <p style="font-size: 0.9rem; color: #999;">© Le Jazz Boulangerie — Todos os direitos reservados</p>
   </footer>
-
-  <script>
-    function toggleTab(button) {
-      const content = button.nextElementSibling;
-      if (content.style.display === "block") {
-        content.style.display = "none";
-        button.textContent = "Ver ingredientes";
-      } else {
-        content.style.display = "block";
-        button.textContent = "Esconder ingredientes";
-      }
-    }
-  </script>
 </body>
 </html>
