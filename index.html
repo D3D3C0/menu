@@ -4,7 +4,135 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cardápio - Le Jazz Boulangerie</title>
-  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* Basic Reset & Font */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #fffaf5; /* Light cream background */
+      color: #333; /* Dark grey text */
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.8em;
+      color: #c94f4f; /* A shade of red for titles */
+      margin-bottom: 30px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e0d0c0; /* Subtle border below main title */
+    }
+
+    h2 {
+      font-size: 2em;
+      color: #aa3c3c; /* Slightly darker red for section titles */
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: center;
+      border-bottom: 1px solid #e0d0c0;
+      padding-bottom: 5px;
+    }
+
+    h3 {
+      font-size: 1.5em;
+      color: #c94f4f;
+      margin-top: 25px;
+      margin-bottom: 15px;
+      text-align: left; /* Keep sub-section titles aligned left within their item */
+      border-bottom: 1px dashed #f0e0d6; /* Dotted line for sub-sections */
+      padding-bottom: 5px;
+    }
+
+    h4 {
+      font-size: 1.3em;
+      color: #aa3c3c;
+      margin-bottom: 5px;
+    }
+
+    .section {
+      max-width: 900px;
+      margin: 0 auto 40px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .section ul {
+      list-style: inside disc;
+      padding-left: 20px;
+      color: #555;
+    }
+
+    .section ul li {
+      margin-bottom: 8px;
+    }
+
+    .item {
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .item:last-child {
+      border-bottom: none; /* No border for the last item in a section */
+    }
+
+    .item p {
+      margin-bottom: 5px;
+      color: #444;
+    }
+
+    .item strong {
+      color: #555;
+      font-weight: 600;
+    }
+
+    .description {
+      font-style: italic;
+      color: #666;
+      font-size: 0.95em;
+      margin-top: 5px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #aa3c3c; /* Match item title color */
+      font-size: 1.1em;
+    }
+
+    .ingredientes {
+      font-size: 0.85em;
+      color: #888;
+      margin-top: 10px;
+      padding: 8px 12px;
+      background-color: #f8f1ed; /* Light background for ingredients */
+      border-left: 3px solid #e8d9d2; /* Left border for emphasis */
+      border-radius: 4px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e0d0c0;
+      margin: 40px auto;
+      max-width: 800px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 15px;
+      border-top: 1px solid #eee;
+      color: #aaa;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
   <h1>Cardápio - Le Jazz Boulangerie</h1>
@@ -12,11 +140,11 @@
   <div class="section">
     <h2>Observações Gerais</h2>
     <ul>
-      <li>Os ovos e frangos usados nas receitas são orgânicos.</li>
-      <li>Todos os produtos estão sujeitos a disponibilidade.</li>
-      <li>Para encomendas, solicitar o catálogo.</li>
-      <li>Também servimos sanduíches sem pão.</li>
-      <li>Se preferir mel para adoçar, peça aos atendentes.</li>
+      <li>Os ovos e frangos usados nas receitas são orgânicos. </li>
+      <li>Todos os produtos estão sujeitos a disponibilidade. </li>
+      <li>Para encomendas, solicitar o catálogo. </li>
+      <li>Também servimos sanduíches sem pão. </li>
+      <li>Se preferir mel para adoçar, peça aos atendentes. </li>
     </ul>
   </div>
 
@@ -24,8 +152,8 @@
     <h2>Buffet</h2>
     <div class="item">
       <h4>Buffet de Almoço</h4>
-      <p class="description">Segunda a Sexta, das 12h às 15h — <span class="price">R$ 89,50</span></p>
-      <p>Seleção de pratos típicos franceses, preparados diariamente com ingredientes frescos. Folhas variadas, legumes e grãos, proteínas assadas e/ou grelhadas.</p>
+      <p class="description">Segunda a Sexta, das 12h às 15h  — <span class="price">R$ 89,50</span></p>
+      <p>Seleção de pratos típicos franceses, preparados diariamente com ingredientes frescos. Folhas variadas, legumes e grãos, proteínas assadas e/ou grelhadas. </p>
     </div>
     <div class="item">
       <h4>Buffet Infantil</h4>
@@ -37,111 +165,318 @@
     <h2>Cardápio Completo</h2>
     <div class="item">
       <h3>Viennoiseries</h3>
-      <p><strong>Croissant aux Amandes</strong> — <span class="price">R$ 19,80</span></p>
-      <p class="description">Delicado, amanteigado e envolvente. Recheado com frangipane (creme de amêndoas), coberto com lâminas crocantes de amêndoas.</p>
+      <p><strong>Croissant aux Amandes</strong> — <span class="price">R$ 19,80</span> </p>
+      <p class="description">Delicado, amanteigado e envolvente. Recheado com frangipane (creme de amêndoas), coberto com lâminas crocantes de amêndoas. </p>
       <p class="ingredientes">Ingredientes: Massa folhada, manteiga, ovos, açúcar, amêndoas, farinha de trigo.</p>
 
-      <p><strong>Bostock</strong> — <span class="price">R$ 16,80</span></p>
-      <p class="description">Brioche embebido em calda de laranja, coberto com creme de amêndoas e gratinado.</p>
+      <p><strong>Bostock</strong> — <span class="price">R$ 16,80</span> </p>
+      <p class="description">Brioche embebido em calda de laranja, coberto com creme de amêndoas e gratinado. </p>
       <p class="ingredientes">Ingredientes: Brioche, calda de laranja, creme de amêndoas, açúcar, ovos.</p>
 
-      <p><strong>Pain au Chocolat</strong> — <span class="price">R$ 15,80</span></p>
-      <p class="description">Folhado clássico com recheio de chocolate meio amargo.</p>
+      <p><strong>Pain au Chocolat</strong> — <span class="price">R$ 15,80</span> </p>
+      <p class="description">Folhado clássico com recheio de chocolate meio amargo. </p>
       <p class="ingredientes">Ingredientes: Massa folhada, chocolate, manteiga, farinha de trigo.</p>
 
-      <p><strong>Pain aux Raisins</strong> — <span class="price">R$ 19,80</span></p>
-      <p class="description">Folhado em espiral com uvas-passas e creme patissier.</p>
+      <p><strong>Pain aux Raisins</strong> — <span class="price">R$ 19,80</span> </p>
+      <p class="description">Folhado em espiral com uvas-passas e creme patissier. </p>
       <p class="ingredientes">Ingredientes: Massa folhada, uvas-passas, creme de confeiteiro, ovos.</p>
 
-      <p><strong>Pain au Chocolat et aux Noisettes</strong> — <span class="price">R$ 21,80</span></p>
-      <p class="description">Folhado artesanal recheado com chocolate e creme de avelã.</p>
+      <p><strong>Pain au Chocolat et aux Noisettes</strong> — <span class="price">R$ 21,80</span> </p>
+      <p class="description">Folhado artesanal recheado com chocolate e creme de avelã. </p>
       <p class="ingredientes">Ingredientes: Massa folhada, chocolate, creme de avelã, manteiga.</p>
 
-      <p><strong>Tarte Fine aux Pommes</strong> — <span class="price">R$ 21,30</span></p>
-      <p class="description">Fatias finas de maçã caramelizada sobre massa folhada crocante.</p>
+      <p><strong>Tarte Fine aux Pommes</strong> — <span class="price">R$ 21,30</span> </p>
+      <p class="description">Fatias finas de maçã caramelizada sobre massa folhada crocante. </p>
       <p class="ingredientes">Ingredientes: Maçã, massa folhada, manteiga, açúcar.</p>
 
-      <p><strong>Baba au Rhum</strong> — <span class="price">R$ 28,80</span></p>
-      <p class="description">Bolo leve embebido em calda de rum com toques cítricos. Acompanha chantilly.</p>
+      <p><strong>Baba au Rhum</strong> — <span class="price">R$ 28,80</span></p> <p class="description">Bolo leve embebido em calda de rum com toques cítricos. Acompanha chantilly.</p>
       <p class="ingredientes">Ingredientes: Farinha de trigo, ovos, manteiga, açúcar, rum, baunilha, raspas de laranja.</p>
     </div>
 
     <div class="item">
-  <h3>Pães & Sanduíches</h3>
-  <p><strong>Cesta de Pães</strong> — <span class="price">R$ 18,80</span></p>
-  <p class="description">Seleção de pães artesanais com manteiga e geleia.</p>
-  <p class="ingredientes">Ingredientes: Pães variados, manteiga, geleia artesanal.</p>
+      <h3>Pães & Sanduíches</h3>
+      <p><strong>Cesta de Pães</strong> — <span class="price">R$ 18,80</span> </p>
+      <p class="description">Seleção de pães artesanais com manteiga e geleia. </p>
+      <p class="ingredientes">Ingredientes: Pães variados, manteiga, geleia artesanal.</p>
 
-  <p><strong>Pão Campagne na Chapa (Manteiga)</strong> — <span class="price">R$ 14,80</span></p>
-  <p><strong>Pão Campagne na Chapa (Requeijão)</strong> — <span class="price">R$ 18,30</span></p>
+      <p><strong>Pão Campagne na Chapa (Manteiga)</strong> — <span class="price">R$ 14,80</span> </p>
+      <p><strong>Pão Campagne na Chapa (Requeijão)</strong> — <span class="price">R$ 18,30</span> </p>
 
-  <p><strong>Queijo Quente</strong> — <span class="price">R$ 30,80</span></p>
-  <p class="description">Queijos meia cura e prato na chapa, no forma rústico ou brioche.</p>
+      <p><strong>Queijo Quente</strong> — <span class="price">R$ 30,80</span> </p>
+      <p class="description">Queijos meia cura e prato na chapa, no forma rústico ou brioche. </p>
 
-  <p><strong>Misto Quente</strong> — <span class="price">R$ 29,80</span></p>
-  <p class="description">Presunto Royale e queijo meia cura, no forma rústico ou brioche.</p>
+      <p><strong>Misto Quente</strong> — <span class="price">R$ 29,80</span> </p>
+      <p class="description">Presunto Royale e queijo meia cura, no forma rústico ou brioche. </p>
 
-  <p><strong>Misto Quente no Croissant</strong> — <span class="price">R$ 32,80</span></p>
+      <p><strong>Misto Quente no Croissant</strong> — <span class="price">R$ 32,80</span> </p>
 
-  <p><strong>Sanduíche de Ovos Mexidos no Croissant</strong> — <span class="price">R$ 30,80</span></p>
-  <p class="description">Dois ovos mexidos com flor de sal no croissant amanteigado.</p>
+      <p><strong>Sanduíche de Ovos Mexidos no Croissant</strong> — <span class="price">R$ 30,80</span> </p>
+      <p class="description">Dois ovos mexidos com flor de sal no croissant amanteigado. </p>
 
-  <p><strong>Breakfast Sandwich</strong> — <span class="price">R$ 40,30</span></p>
-  <p class="description">Ovo frito, presunto Royale, queijo meia cura e bacon, no English muffin artesanal.</p>
+      <p><strong>Breakfast Sandwich</strong> — <span class="price">R$ 40,30</span> </p>
+      <p class="description">Ovo frito, presunto Royale, queijo meia cura e bacon, no English muffin artesanal. </p>
 
-  <p><strong>Croque Monsieur</strong> — <span class="price">R$ 42,50</span></p>
-  <p class="description">Presunto Royale, queijo meia cura e molho bechamel gratinado no brioche.</p>
-  <p><strong>+ Ovo (Croque Madame)</strong> — <span class="price">R$ 6,50</span></p>
+      <p><strong>Croque Monsieur</strong> — <span class="price">R$ 42,50</span> </p>
+      <p class="description">Presunto Royale, queijo meia cura e molho bechamel gratinado no brioche. </p>
+      <p><strong>+ Ovo (Croque Madame)</strong> — <span class="price">R$ 6,50</span> </p>
 
-  <p><strong>Bauru Tradição</strong> — <span class="price">R$ 41,80</span></p>
-  <p class="description">Presunto Royale, rosbife, bacon, queijo meia cura e tomate no pão forma rústico.</p>
+      <p><strong>Bauru Tradição</strong> — <span class="price">R$ 41,80</span> </p>
+      <p class="description">Presunto Royale, rosbife, bacon, queijo meia cura e tomate no pão forma rústico. </p>
 
-  <p><strong>Sanduíche de Minas, Tomate e Zaatar</strong> — <span class="price">R$ 29,30</span></p>
-  <p class="description">Queijo minas na chapa com tomate e zaatar no pão rústico.</p>
-  <p><strong>Sem Pão, com Ovo Poché</strong> — <span class="price">R$ 36,30</span></p>
+      <p><strong>Sanduíche de Minas, Tomate e Zaatar</strong> — <span class="price">R$ 29,30</span> </p>
+      <p class="description">Queijo minas na chapa com tomate e zaatar no pão rústico. </p>
+      <p><strong>Sem Pão, com Ovo Poché</strong> — <span class="price">R$ 36,30</span> </p>
 
-  <p><strong>Sanduíche de Salada de Atum</strong> — <span class="price">R$ 35,30</span></p>
-  <p class="description">Com avocado, cebola roxa, alcaparras, anchovas e alface-americana.</p>
+      <p><strong>Sanduíche de Salada de Atum</strong> — <span class="price">R$ 35,30</span> </p>
+      <p class="description">Com avocado, cebola roxa, alcaparras, anchovas e alface-americana. </p>
 
-  <p><strong>Club Sandwich de Frango</strong> — <span class="price">R$ 39,80</span></p>
-  <p class="description">Frango, avocado, bacon, maionese, picles, cebola, tomate e alface-americana no pão de forma.</p>
+      <p><strong>Club Sandwich de Frango</strong> — <span class="price">R$ 39,80</span> </p>
+      <p class="description">Frango, avocado, bacon, maionese, picles, cebola, tomate e alface-americana no pão de forma. </p>
 
-  <p><strong>Mortadela na Focaccia</strong> — <span class="price">R$ 42,30</span></p>
-  <p class="description">Mortadela italiana, mozzarella de búfala, pesto e tomate confitado.</p>
-  <p><strong>Opção de Berinjela</strong> — <span class="price">R$ 34,30</span></p>
+      <p><strong>Mortadela na Focaccia</strong> — <span class="price">R$ 42,30</span> </p>
+      <p class="description">Mortadela italiana, mozzarella de búfala, pesto e tomate confitado. </p>
+      <p><strong>Opção de Berinjela</strong> — <span class="price">R$ 34,30</span> </p>
 
-  <p><strong>Sanduíche de Carne Assada</strong> — <span class="price">R$ 48,80</span></p>
-  <p class="description">Carne chapeada com sal grosso e queijo meia cura na ciabatta. Acompanha molho chimichurri.</p>
+      <p><strong>Sanduíche de Carne Assada</strong> — <span class="price">R$ 48,80</span> </p>
+      <p class="description">Carne chapeada com sal grosso e queijo meia cura na ciabatta. Acompanha molho chimichurri. </p>
 
-  <p><strong>Sanduíche de Rosbife</strong> — <span class="price">R$ 47,80</span></p>
-  <p class="description">No pão rústico com queijo meia cura na chapa, picles e mostarda à l'ancienne.</p>
+      <p><strong>Sanduíche de Rosbife</strong> — <span class="price">R$ 47,80</span> </p>
+      <p class="description">No pão rústico com queijo meia cura na chapa, picles e mostarda à l'ancienne. </p>
 
-  <p><strong>+ Salada Verde</strong> — <span class="price">R$ 17,80</span></p>
-  <p><strong>+ Pão Sem Glúten</strong> — <span class="price">R$ 6,80</span></p>
-</div>
+      <p><strong>+ Salada Verde</strong> — <span class="price">R$ 17,80</span> </p>
+      <p><strong>+ Pão Sem Glúten</strong> — <span class="price">R$ 6,80</span> </p>
+    </div>
 
-<div class="item">
-  <h3>Ovos & Outros</h3>
+    <div class="item">
+      <h3>Ovos & Outros</h3>
 
-  <p><strong>2 Ovos Fritos, Mexidos ou Pochê</strong> — <span class="price">R$ 26,80</span></p>
-  <p class="description">Acompanha uma fatia de pão campagne na chapa.</p>
+      <p><strong>2 Ovos Fritos, Mexidos ou Pochê</strong> — <span class="price">R$ 26,80</span> </p>
+      <p class="description">Acompanha uma fatia de pão campagne na chapa. </p>
 
-  <p><strong>Com Bacon</strong> — <span class="price">R$ 34,60</span></p>
+      <p><strong>Com Bacon</strong> — <span class="price">R$ 34,60</span> </p>
 
-  <p><strong>Ovos Árabes</strong> — <span class="price">R$ 43,30</span></p>
-  <p class="description">Dois ovos fritos com zaatar, hommus, tomates confitados, pepinos e azeitonas. Acompanha pão barbari.</p>
+      <p><strong>Ovos Árabes</strong> — <span class="price">R$ 43,30</span> </p>
+      <p class="description">Dois ovos fritos com zaatar, hommus, tomates confitados, pepinos e azeitonas. Acompanha pão barbari. </p>
 
-  <p><strong>Eggs Benedict (Bacon e Presunto Defumado)</strong></p>
-  <p class="description">Dois ovos poché com molho hollandaise no English muffin torrado.</p>
-  <p>1/2 porção — <span class="price">R$ 31,80</span><br />
-     Inteira — <span class="price">R$ 49,00</span></p>
+      <p><strong>Eggs Benedict (Bacon e Presunto Defumado)</strong> </p>
+      <p class="description">Dois ovos poché com molho hollandaise no English muffin torrado. </p>
+      <p>1/2 porção — <span class="price">R$ 31,80</span> <br />
+        Inteira — <span class="price">R$ 49,00</span> </p>
 
-  <p><strong>Eggs Benedict (Salmão Defumado)</strong></p>
-  <p>1/2 porção — <span class="price">R$ 38,50</span><br />
-     Inteira — <span class="price">R$ 59,50</span></p>
-</div>
+      <p><strong>Eggs Benedict (Salmão Defumado)</strong> </p>
+      <p>1/2 porção — <span class="price">R$ 38,50</span> <br />
+        Inteira — <span class="price">R$ 59,50</span> </p>
+    </div>
 
-<!-- Outras seções como Tartines, Bolos, Bebidas, Galettes, Pratos, etc. seriam adicionadas aqui seguindo o mesmo padrão. -->
+    <div class="item">
+        <h3>Bolos & Tortas</h3>
+        <p><strong>Pavlova</strong> — <span class="price">R$ 15,80</span> </p>
+        <p class="description">Bolo com base de merengue, frutas vermelhas e limão siciliano. </p>
+
+        <p><strong>Bolo Crèmeux de Chocolate</strong> — <span class="price">R$ 31,80</span> </p>
+
+        <p><strong>Bolo do Dia</strong> — <span class="price">Pergunte aos atendentes</span> </p>
+        <p class="description">Sabores disponíveis e valores. </p>
+
+        <p><strong>Torta de Ricota com Mirtilo (Fatia)</strong> — <span class="price">R$ 26,80</span> </p>
+        <p><strong>Torta de Ricota com Mirtilo (Inteira)</strong> — <span class="price">R$ 151,50</span> </p>
+
+        <p><strong>Tarte au Citron (Torta de Limão Siciliano - Fatia)</strong> — <span class="price">R$ 27,80</span> </p>
+        <p><strong>Tarte au Citron (Torta de Limão Siciliano - Inteira)</strong> — <span class="price">R$ 136,50</span> </p>
+
+        <p><strong>Torta de Maçãs com Amêndoas (Fatia)</strong> — <span class="price">R$ 27,80</span> </p>
+        <p><strong>Torta de Maçãs com Amêndoas (Inteira)</strong> — <span class="price">R$ 151,50</span> </p>
+
+        <p><strong>Tarte au Chocolat (Chocolate Belga - Fatia)</strong> — <span class="price">R$ 30,30</span> </p>
+        <p><strong>Tarte au Chocolat (Chocolate Belga - Inteira)</strong> — <span class="price">R$ 155,30</span> </p>
+    </div>
+
+    <div class="item">
+        <h3>Tartines</h3>
+        <p><strong>Pan Tumaca</strong> — <span class="price">R$ 23,80</span> </p>
+        <p class="description">Fatia de ciabatta tostada no azeite, com tomate ralado. </p>
+        <p><strong>Com Presunto Cru e/ou Anchovas</strong> — <span class="price">R$ 41,10</span> </p>
+
+        <p><strong>Tartine de Avocado</strong> </p>
+        <p class="description">Pão campagne tostado com azeite, avocado amassado, flor de sal, semente de abóbora e brotos. </p>
+        <p>1/2 porção — <span class="price">R$ 27,80</span> <br />
+           Inteira — <span class="price">R$ 39,80</span> </p>
+        <p><strong>Com Ovo Poché</strong> — <span class="price">R$ 7,00</span> </p>
+        <p><strong>Com Salmão Defumado</strong> — <span class="price">R$ 19,30</span> </p>
+    </div>
+
+    <div class="item">
+        <h3>Frutas, Iogurtes & Granola da Casa</h3>
+        <p><strong>Iogurte e Granola</strong> — <span class="price">R$ 25,80</span> </p>
+
+        <p><strong>Salada de Frutas</strong> — <span class="price">R$ 28,30</span> </p>
+        <p class="description">Manga, abacaxi, mamão, maçã verde e maracujá. </p>
+        <p><strong>Granola</strong> — <span class="price">R$ 8,00</span> </p>
+        <p><strong>Iogurte</strong> — <span class="price">R$ 10,00</span> </p>
+
+        <p><strong>Meia Papaia</strong> — <span class="price">R$ 13,30</span> </p>
+        <p><strong>Granola</strong> — <span class="price">+ R$ 8,00</span> </p>
+
+        <p><strong>Vitamina Mista</strong> — <span class="price">R$ 19,80</span> </p>
+        <p class="description">Laranja com mamão, banana e aveia. </p>
+
+        <p><strong>Açaí (Com banana, mel e granola)</strong> — <span class="price">R$ 35,80</span> </p>
+        <p class="description">Porções Extras:</p>
+        <ul>
+            <li>Banana ou Morango — <span class="price">R$ 6,30</span> </li>
+            <li>Granola — <span class="price">R$ 8,00</span> </li>
+            <li>Amêndoas Laminadas — <span class="price">R$ 9,80</span> </li>
+        </ul>
+
+        <p><strong>Sucos de Açaí com Laranja</strong> — <span class="price">R$ 19,80</span> </p>
+        <p><strong>Sucos de Açaí com Água de Coco</strong> — <span class="price">R$ 19,80</span> </p>
+    </div>
+
+    <div class="item">
+        <h3>Galettes de Trigo Sarraceno</h3>
+        <p class="description">Crepe típico da região da Bretanha, feito com farinha de sarraceno, naturalmente sem glúten. </p>
+        <p><strong>Complet</strong> — <span class="price">R$ 39,80</span> </p>
+        <p class="description">Presunto Royale, queijo gruyère e ovo. </p>
+
+        <p><strong>Chèvre</strong> — <span class="price">R$ 43,50</span> </p>
+        <p class="description">Cogumelos-de-paris, espinafre e queijo de cabra. </p>
+
+        <p><strong>Italiano</strong> — <span class="price">R$ 41,50</span> </p>
+        <p class="description">Mortadela, mozzarella de búfala, tomate e manjericão. </p>
+
+        <p><strong>Salmão</strong> — <span class="price">R$ 45,50</span> </p>
+        <p class="description">Salmão defumado, creme azedo e espinafre. </p>
+    </div>
+
+    <div class="item">
+        <h3>Sucos</h3>
+        <h4>1 Fruta</h4>
+        <p class="description">Sucos produzidos com a fruta da estação, sujeitos a sazonalidade. </p>
+        <p><strong>Abacaxi</strong> — <span class="price">R$ 16,30</span> </p>
+        <p><strong>Abacaxi com capim-santo</strong> — <span class="price">R$ 16,30</span> </p>
+        <p><strong>Abacaxi com hortelã</strong> — <span class="price">R$ 16,30</span> </p>
+        <p><strong>Laranja</strong> — <span class="price">R$ 16,30</span> </p>
+        <p><strong>Limão</strong> — <span class="price">R$ 16,30</span> </p>
+        <p><strong>Melancia</strong> — <span class="price">R$ 16,30</span> </p>
+        <p><strong>Maracujá</strong> — <span class="price">R$ 16,30</span> </p>
+        <p><strong>Maracujá com capim-santo</strong> — <span class="price">R$ 16,30</span> </p>
+        <p><strong>Tangerina</strong> — <span class="price">R$ 16,30</span> </p>
+
+        <h4>2 Frutas</h4>
+        <p><strong>Laranja com abacaxi</strong> — <span class="price">R$ 18,80</span> </p>
+        <p><strong>Laranja com abacaxi e capim-santo</strong> — <span class="price">R$ 18,80</span> </p>
+        <p><strong>Laranja com morango</strong> — <span class="price">R$ 18,80</span> </p>
+        <p><strong>Melancia com limão e hortelã</strong> — <span class="price">R$ 18,80</span> </p>
+
+        <h4>Especiais</h4>
+        <p><strong>Verde</strong> — <span class="price">R$ 19,80</span> </p>
+        <p class="description">Laranja, couve, abacaxi e gengibre. </p>
+
+        <p><strong>Citronnade à la Curcuma</strong> — <span class="price">R$ 19,80</span> </p>
+        <p class="description">Limão com cúrcuma, óleo de orégano e calda de agave. </p>
+
+        <p><strong>Betacaroteno</strong> — <span class="price">R$ 19,80</span> </p>
+        <p class="description">Beterraba, cenoura, maçã e água de coco. </p>
+
+        <p><strong>Detox</strong> — <span class="price">R$ 19,80</span> </p>
+        <p class="description">Couve, maçã verde, folha de salsão e água de coco. </p>
+
+        <p><strong>Fruits Rouges et Orange</strong> — <span class="price">R$ 19,80</span> </p>
+        <p class="description">Frutas vermelhas, laranja e hortelã. </p>
+    </div>
+
+    <div class="item">
+        <h3>Cafés</h3>
+        <p><strong>Café Por Elas</strong></p> <p><strong>Espresso</strong> — <span class="price">R$ 9,50</span> </p>
+        <p><strong>Espresso Duplo</strong> — <span class="price">R$ 17,80</span> </p>
+        <p><strong>Descafeinado</strong> — <span class="price">R$ 10,80</span> </p>
+        <p><strong>Coado</strong> — <span class="price">R$ 15,30</span> </p>
+        <p><strong>Americano</strong> — <span class="price">R$ 10,30</span> </p>
+        <p><strong>Macchiato</strong> — <span class="price">R$ 13,30</span> </p>
+        <p><strong>Media</strong> — <span class="price">R$ 20,30</span> </p>
+        <p><strong>Cappuccino</strong> — <span class="price">R$ 15,80</span> </p>
+        <p><strong>Latte</strong> — <span class="price">R$ 15,80</span> </p>
+        <p><strong>Iced Coffee</strong> — <span class="price">R$ 16,30</span> </p>
+        <p><strong>Espresso Tônica</strong> — <span class="price">R$ 16,80</span> </p>
+        <p><strong>Frappuccino</strong> — <span class="price">R$ 22,80</span> </p>
+        <p><strong>Mocca</strong> — <span class="price">R$ 23,80</span> </p>
+    </div>
+
+    <div class="item">
+        <h3>Chocolates</h3>
+        <p><strong>Chocolate Quente</strong> — <span class="price">R$ 20,80</span> </p>
+        <p><strong>Achocolatado</strong> — <span class="price">R$ 13,80</span> </p>
+    </div>
+
+    <div class="item">
+        <h3>Infusões & Chás</h3>
+        <p><strong>Earl Grey</strong> — <span class="price">R$ 12,30</span> </p>
+        <p><strong>Hortelã</strong> — <span class="price">R$ 12,30</span> </p>
+        <p><strong>Capim-Santo</strong> — <span class="price">R$ 12,30</span> </p>
+        <p><strong>Camomila</strong> — <span class="price">R$ 12,30</span> </p>
+        <p><strong>Erva-Doce</strong> — <span class="price">R$ 12,30</span> </p>
+        <p><strong>Limão, Gengibre e Mel</strong> — <span class="price">R$ 12,30</span> </p>
+        <p><strong>English Breakfast</strong> — <span class="price">R$ 12,30</span> </p>
+        <p><strong>Darjeeling</strong> — <span class="price">R$ 12,30</span> </p>
+        <p><strong>Matcha (Quente, com leite)</strong> — <span class="price">R$ 15,80</span> </p>
+        <p><strong>Mate Gelado da Casa (Com limão e xarope de açúcar)</strong> — <span class="price">R$ 15,80</span> </p>
+        <p><strong>Matcha Gelado (Com frutas vermelhas)</strong> — <span class="price">R$ 16,30</span> </p>
+        <p><strong>Matcha Tônica (Com limão e xarope de açúcar)</strong> — <span class="price">R$ 16,80</span> </p>
+    </div>
+
+    <div class="item">
+        <h3>Para Compartilhar</h3>
+        <p><strong>Seleção de Queijos</strong> — <span class="price">R$ 51,50</span> </p>
+        <p class="description">Canastra, chabichou e parmesão. </p>
+        <p><strong>Prato de Frios</strong> — <span class="price">R$ 50,50</span> </p>
+        <p class="description">Presunto cru, mortadela italiana com pistache e salame Pirineus. Acompanha picles e cesta de pães. </p>
+    </div>
+
+    <div class="item">
+        <h3>Para Todas as Horas</h3>
+        <p><strong>Nouveau: Grelhado com Salada</strong> — <span class="price">R$ 56,50</span> </p>
+        <p class="description">130g de filé mignon ou sobrecoxa de frango desossada. Acompanha folhas variadas, cebola roxa, tomate sweet grape, azeitonas pretas, amêndoas laminadas e molho. </p>
+
+        <p><strong>Sopa do Dia</strong> — <span class="price">R$ 28,50</span> </p>
+        <p class="description">Acompanha torradinhas. </p>
+
+        <p><strong>Quiche do Dia (Fatia)</strong> — <span class="price">R$ 35,50</span> </p>
+        <p><strong>Quiche do Dia (Com Salada)</strong> — <span class="price">R$ 51,80</span> </p>
+
+        <p><strong>Torta de Frango (Fatia)</strong> — <span class="price">R$ 34,50</span> </p>
+        <p><strong>Torta de Frango (Com Salada)</strong> — <span class="price">R$ 50,80</span> </p>
+
+        <p><strong>Pizza Romana em Pedaço</strong> — <span class="price">R$ 23,80</span> </p>
+        <p class="description">Veja os sabores do dia. </p>
+
+        <p><strong>Salada Mediterrânea</strong> — <span class="price">R$ 48,50</span> </p>
+        <p class="description">Folhas variadas, grão-de-bico, tomate-cereja, pepino, avocado, cebola roxa, azeitonas pretas e queijo de ovelha. </p>
+
+        <p><strong>Nouveau: Rigatoni Salice Champignon</strong> — <span class="price">R$ 79,00</span> </p>
+        <p class="description">Massa curta ao molho cremoso de cogumelos e espinafre. </p>
+    </div>
+
+    <div class="item">
+        <h3>Extras</h3>
+        <p><strong>Leite Vegetal</strong> — <span class="price">R$ 6,30</span> </p>
+        <p><strong>Tomates Picados</strong> — <span class="price">R$ 5,30</span> </p>
+        <p><strong>Requeijão</strong> — <span class="price">R$ 7,30</span> </p>
+        <p><strong>Bacon</strong> — <span class="price">R$ 7,80</span> </p>
+        <p><strong>Maple</strong> — <span class="price">R$ 6,80</span> </p>
+        <p><strong>Cogumelos-de-Paris</strong> — <span class="price">R$ 10,30</span> </p>
+        <p><strong>Geleia de Morango ou Figo</strong> — <span class="price">R$ 6,80</span> </p>
+        <p><strong>Fatia de Pão Campagne</strong> — <span class="price">R$ 7,30</span> </p>
+        <p><strong>Ovo Poché ou Frito</strong> — <span class="price">R$ 7,00</span> </p>
+        <p><strong>Bacon e Presunto Defumado</strong> — <span class="price">R$ 16,80</span> </p>
+        <p><strong>Presunto Cru</strong> — <span class="price">R$ 17,30</span> </p>
+        <p><strong>Salada Verde</strong> — <span class="price">R$ 17,80</span> </p>
+        <p><strong>Nutella</strong> — <span class="price">R$ 8,30</span> </p>
+        <p><strong>Anchovas</strong> — <span class="price">R$ 17,30</span> </p>
+        <p><strong>Sorvete de Creme</strong> — <span class="price">R$ 16,30</span> </p>
+        <p><strong>Salmão Defumado</strong> — <span class="price">R$ 19,30</span> </p>
+        <p><strong>Bacon Crocante</strong> — <span class="price">R$ 6,50</span> </p>
+        <p><strong>Ovo Cozido</strong> — <span class="price">R$ 7,00</span> </p>
+    </div>
 
   </div>
 
