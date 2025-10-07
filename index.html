@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -82,6 +82,17 @@
       padding: 10px;
       border-radius: 4px;
     }
+    .tab-content strong {
+      color: #a33d3d;
+    }
+    .alergias {
+      margin-top: 8px;
+      font-size: 0.9em;
+      color: #8a4d4d;
+      background: #fff4f4;
+      padding: 6px;
+      border-radius: 4px;
+    }
     footer {
       text-align: center;
       margin-top: 40px;
@@ -108,6 +119,7 @@
         <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
         <div class="tab-content">
           <strong>Ingredientes:</strong> Massa folhada, manteiga, açúcar, ovos, farinha de trigo, amêndoas.
+          <div class="alergias"><strong>Alérgenos:</strong> Contém glúten, ovos e amêndoas.</div>
         </div>
       </div>
     </section>
@@ -120,6 +132,7 @@
         <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
         <div class="tab-content">
           <strong>Ingredientes:</strong> Brioche, calda de laranja, creme de amêndoas, açúcar, ovos.
+          <div class="alergias"><strong>Alérgenos:</strong> Contém glúten, ovos e amêndoas.</div>
         </div>
       </div>
     </section>
@@ -132,6 +145,7 @@
         <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
         <div class="tab-content">
           <strong>Ingredientes:</strong> Maçã, massa folhada, manteiga, açúcar, canela.
+          <div class="alergias"><strong>Alérgenos:</strong> Contém glúten e lactose.</div>
         </div>
       </div>
     </section>
@@ -147,6 +161,7 @@
         <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
         <div class="tab-content">
           <strong>Ingredientes:</strong> Pães variados, manteiga, geleia artesanal.
+          <div class="alergias"><strong>Alérgenos:</strong> Contém glúten e lactose.</div>
         </div>
       </div>
     </section>
@@ -159,6 +174,7 @@
         <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
         <div class="tab-content">
           <strong>Ingredientes:</strong> Presunto Royale, queijo meia cura, manteiga, pão de forma artesanal.
+          <div class="alergias"><strong>Alérgenos:</strong> Contém glúten e lactose.</div>
         </div>
       </div>
     </section>
@@ -174,6 +190,7 @@
         <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
         <div class="tab-content">
           <strong>Ingredientes:</strong> Ovos, manteiga, sal, pimenta do reino, pão campagne.
+          <div class="alergias"><strong>Alérgenos:</strong> Contém ovos e glúten.</div>
         </div>
       </div>
     </section>
@@ -186,6 +203,74 @@
         <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
         <div class="tab-content">
           <strong>Ingredientes:</strong> Ovos, hommus, zaatar, tomate confitado, pepino, azeitonas, pão barbari.
+          <div class="alergias"><strong>Alérgenos:</strong> Contém ovos e gergelim.</div>
+        </div>
+      </div>
+    </section>
+      <!-- Bar & Bebidas -->
+    <div class="section-title">Bar & Bebidas</div>
+
+    <section class="item">
+      <img src="images/cafe-expresso.jpg" alt="Café Espresso" />
+      <h2>☕ Café Espresso</h2>
+      <p>O clássico italiano preparado com grãos selecionados e torra média, resultando em um sabor intenso e encorpado.</p>
+      <div class="tab">
+        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
+        <div class="tab-content">
+          <strong>Ingredientes:</strong> Café moído 100% arábica.
+          <div class="alergias"><strong>Alérgenos:</strong> Não contém alérgenos.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="item">
+      <img src="images/cappuccino.jpg" alt="Cappuccino" />
+      <h2>🥛 Cappuccino</h2>
+      <p>Equilíbrio perfeito entre espresso, leite vaporizado e espuma cremosa. Um abraço em forma de bebida.</p>
+      <div class="tab">
+        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
+        <div class="tab-content">
+          <strong>Ingredientes:</strong> Café espresso, leite vaporizado, espuma de leite.
+          <div class="alergias"><strong>Alérgenos:</strong> Contém lactose.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="item">
+      <img src="images/chocolate-quente.jpg" alt="Chocolate Quente" />
+      <h2>🍫 Chocolate Quente</h2>
+      <p>Cremoso, intenso e reconfortante. Feito com chocolate belga e leite integral, ideal para momentos de aconchego.</p>
+      <div class="tab">
+        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
+        <div class="tab-content">
+          <strong>Ingredientes:</strong> Chocolate belga, leite, açúcar, cacau em pó.
+          <div class="alergias"><strong>Alérgenos:</strong> Contém lactose e pode conter traços de soja.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="item">
+      <img src="images/suco-natural.jpg" alt="Suco Natural" />
+      <h2>🍊 Suco Natural</h2>
+      <p>Suco fresco preparado com frutas da estação, servido sem adição de açúcar. Puro sabor e refrescância natural.</p>
+      <div class="tab">
+        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
+        <div class="tab-content">
+          <strong>Ingredientes:</strong> Frutas frescas selecionadas (laranja, abacaxi, melancia, maracujá, limão, entre outras).
+          <div class="alergias"><strong>Alérgenos:</strong> Pode conter traços de frutas com glúten ou látex natural.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="item">
+      <img src="images/drink-spritz.jpg" alt="Aperol Spritz" />
+      <h2>🍹 Aperol Spritz</h2>
+      <p>Um clássico italiano perfeito para o fim de tarde. Combinação refrescante de Aperol, espumante e água com gás.</p>
+      <div class="tab">
+        <button class="tab-button" onclick="toggleTab(this)">Ver ingredientes</button>
+        <div class="tab-content">
+          <strong>Ingredientes:</strong> Aperol, espumante brut, água com gás, laranja.
+          <div class="alergias"><strong>Alérgenos:</strong> Contém sulfitos.</div>
         </div>
       </div>
     </section>
